@@ -1,0 +1,70 @@
+.register-container{
+    margin: 100px 391px 176px;
+    width: 655px;
+    height: 513px;
+    background: #E6F4E6;
+}
+
+.register-container__title {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    margin-top: 128px;
+}
+
+.register-container__subtitle {
+    font-size: 14px;
+    text-align: center;
+    align-items: center;
+    margin-top: 2px;
+}
+
+.register-container__input {
+    text-align: center;
+    margin-top: 18px;
+}
+
+.register-container__email-password {
+    width: 327px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #E0E0E0;
+    padding: 0 16px;}
+.register-container__email-password::placeholder {
+    color: #665F5F;
+
+}
+.register-container__btn {
+    text-align: center;
+}
+.register-container__btn-continue {
+    width: 327px;
+    height: 40px;
+    border-radius: 8px;
+    background: #006C43;
+    margin-top: 18px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.register-container__linkto-signup {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.register-container__account {
+    font-weight: 500;
+}
+
+.register-container__linkto-signup {
+    margin: 10px 207px;
+}
+
+.register-container__account-green {
+    color: #006C43;
+}

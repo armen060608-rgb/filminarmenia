@@ -1,0 +1,261 @@
+.cu-root {
+    background: #eef0f8;
+    min-height: 100vh;
+    padding: 3rem 2rem;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    box-sizing: border-box;
+}
+
+.cu-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Heading */
+.cu-title {
+    font-size: 52px;
+    font-weight: 300;
+    color: #1a2050;
+    margin: 0 0 0.6rem;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+}
+
+.cu-subtitle {
+    font-size: 15px;
+    color: #5a6080;
+    line-height: 1.65;
+    margin: 0 0 2.5rem;
+}
+
+/* Two-column layout */
+.cu-cols {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+/* ── Left column ── */
+.cu-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.cu-info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cu-info-card {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 0.5px solid rgba(30, 40, 100, 0.1);
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.cu-info-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #eef0f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.cu-info-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a2050;
+    margin-bottom: 2px;
+}
+
+.cu-info-value {
+    font-size: 14px;
+    color: #3a4a80;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.cu-info-note {
+    font-size: 12px;
+    color: #8890b0;
+}
+
+/* Social row */
+.cu-social {
+    margin-top: 1.5rem;
+}
+
+.cu-social-label {
+    font-size: 13px;
+    color: #5a6080;
+    margin: 0 0 0.6rem;
+}
+
+.cu-social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.cu-social-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #1a2050;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background 0.15s ease;
+}
+
+.cu-social-btn:hover {
+    background: #2e3d8f;
+}
+
+/* ── Form card ── */
+.cu-form-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 0.5px solid rgba(30, 40, 100, 0.1);
+    padding: 2rem;
+}
+
+.cu-form-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #1a2050;
+    margin: 0 0 4px;
+}
+
+.cu-form-desc {
+    font-size: 13px;
+    color: #8890b0;
+    margin: 0 0 1.75rem;
+}
+
+/* Fields */
+.cu-field {
+    margin-bottom: 1.25rem;
+}
+
+.cu-field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #3a3a60;
+    margin-bottom: 6px;
+}
+
+.cu-field input,
+.cu-field textarea {
+    width: 90%;
+    padding: 10px 14px;
+    border: 1px solid #d8ddf0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #1a2050;
+    background: #ffffff;
+    outline: none;
+    transition: border-color 0.15s ease;
+    resize: vertical;
+}
+
+.cu-field input::placeholder,
+.cu-field textarea::placeholder {
+    color: #b0b8d8;
+}
+
+.cu-field input:focus,
+.cu-field textarea:focus {
+    border-color: #3a4a90;
+    box-shadow: 0 0 0 3px rgba(58, 74, 144, 0.08);
+}
+
+.cu-field textarea {
+    min-height: 120px;
+}
+
+/* Submit button */
+.cu-send-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #1a2050;
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.cu-send-btn:hover:not(:disabled) {
+    background: #2e3d8f;
+}
+
+.cu-send-btn:disabled {
+    background: #8890b0;
+    cursor: not-allowed;
+}
+
+/* Toast feedback */
+.cu-toast {
+    margin-top: 1rem;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.cu-toast--success {
+    background: #eaf3de;
+    color: #3b6d11;
+    border: 0.5px solid #97c459;
+}
+
+.cu-toast--error {
+    background: #fcebeb;
+    color: #791f1f;
+    border: 0.5px solid #f09595;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .cu-cols {
+        grid-template-columns: 1fr;
+    }
+
+    .cu-title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .cu-root {
+        padding: 2rem 1rem;
+    }
+
+    .cu-title {
+        font-size: 28px;
+    }
+
+    .cu-form-card {
+        padding: 1.25rem;
+    }
+}

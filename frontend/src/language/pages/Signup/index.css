@@ -1,0 +1,74 @@
+.register-container2 {
+    margin: 100px 391px 176px;
+    width: 655px;
+    height: 513px;
+    background: #E6F4E6;
+}
+
+.register-container2__title {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 24px;
+}
+
+.register-container2__subtitle {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+.register-container2__inputs {
+    display: block;
+    margin-left: 164px;
+}
+.register-container2__input {
+    width: 327px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #E0E0E0;
+    margin-top: 16px;
+    padding-left: 16px;
+}
+
+.register-container2__input::placeholder {
+    color: #665F5F;
+}
+
+.register-container2__image1 {
+    position: absolute;
+    top: 443px;
+    left: 834px;
+}
+
+.register-container2__image2 {
+    position: absolute;
+    top: 498px;
+    left: 834px;
+}
+
+.register-container2__have-account {
+    display: flex;
+    margin-left: 57px;
+    font-size: 14px;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.register-container2__have-account__green {
+    color: #006C43;
+}
+
+.register-container2__clicking {
+    display: flex;
+    width: 1000px;
+    position: absolute;
+    right: -80px;
+    font-size: 12px;
+    gap: 5px;
+    margin-top: 52px;
+}
+
+.register-container2__clicking-green {
+    color: #006C43;
+}

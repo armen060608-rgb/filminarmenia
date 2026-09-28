@@ -1,0 +1,13 @@
+@media (max-width: 767px) {
+    .top-box {
+        padding: 119px 52px 263px 52px;
+    }
+
+    .choose__features {
+        width: 100%;
+    }
+
+    .feature-box {
+        width: 100%;
+    }
+}

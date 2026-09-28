@@ -1,0 +1,20 @@
+.not-found {
+    padding: 88px 281px 155px 417px;
+    justify-content: space-between;
+    gap: 47px;
+    display: flex;
+    align-items: center;
+}
+
+.not-found-container {
+    justify-content: center;
+    text-align: center;
+}
+
+.sorry {
+    font-size: 64px;
+}
+
+.page-not-found {
+    font-size: 40px;
+}

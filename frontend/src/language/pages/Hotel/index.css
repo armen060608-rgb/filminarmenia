@@ -1,0 +1,243 @@
+.container__hotels {
+    margin: 30px 65px;
+}
+
+.heading__hotels {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.upper-container__search-left {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.search-left {
+    width: 100%;
+    padding: 15px;
+    font-size: 24px;
+    background-color: #D9D9D9;
+    border: 1px solid #000000;
+}
+
+.upper-container__search {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.upper-container__hotels {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+}
+
+.upper-container__search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.search-left {
+    flex: 1;
+    padding: 15px;
+    font-size: 24px;
+    background-color: #D9D9D9;
+    border: 1px solid #000000;
+}
+
+.upper-container__search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    border: 1px solid #000000;
+    background-color: #D9D9D9;
+}
+
+.search-left {
+    flex: 1;
+    padding: 15px;
+    font-size: 24px;
+    background-color: #D9D9D9;
+    border: none; /* remove individual border */
+}
+
+/* HotelsTable.css */
+
+.table-wrapper {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+    align-items: flex-start;
+}
+
+.table {
+    border-collapse: collapse;
+    flex: 1;
+}
+
+.table th {
+    border: 1px solid #000;
+    padding: 17px 20px;
+    background: #D9D9D9;
+    font-weight: 400;
+    font-size: 16px;
+    width: 33%;
+}
+
+.table td {
+    border: 1px solid #000;
+    padding: 18px 20px;
+    background: #D9D9D9;
+    font-size: 15px;
+}
+
+.actions-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.create-wrapper {
+    display: flex;
+    align-items: center;
+    height: 47px; /* match your th height */
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.btn-create {
+    background: #3a6b35;
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.row-actions {
+    display: flex;
+    gap: 17px;
+    padding: 10px 0;
+    align-items: center;
+    height: 57px;
+}
+
+.btn-action {
+    padding: 10px;
+    background: #D9D9D9;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #111;
+}
+
+.tabs button:nth-child(2) {
+    margin-right: 40px;
+}
+
+.create-hotel__form {
+    padding-top: 32px;
+}
+
+.create-hotel__photos {
+    display: flex;
+    gap: 120px;
+    margin-bottom: 48px;
+}
+
+.create-hotel__photo-block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.create-hotel__photo-label {
+    font-size: 24px;
+    text-align: center;
+}
+
+.create-hotel__upload-area {
+    padding: 110px;
+    border: 1px solid #000000;
+    background: #D9D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.create-hotel__upload-area.dragging {
+    border-color: #006C43;
+    background: #d6ede3;
+}
+
+.create-hotel__preview-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.create-hotel__gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+}
+
+.create-hotel__gallery-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.create-hotel__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.create-hotel__field-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.create-hotel__field-label {
+    font-size: 24px;
+    min-width: 136px;
+    text-align: center;
+    border: 1px solid #000000;
+    padding: 17px 0;
+    background: #D9D9D9;
+}
+
+.create-hotel__field-input {
+    font-size: 24px;
+    flex: 1;
+    height: 65.5px;
+    border: 1px solid #000000;
+    background: #D9D9D9;
+    padding: 0 16px;
+}
+
+.create-hotel__submit-row {
+    margin-top: 40px;
+}
+
+.tab-content {
+    display: inline-flex;
+}

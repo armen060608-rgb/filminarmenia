@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+node_modules/
+.idea/
+.gradle/
+build/
+out/
+*.class
+*.jar
+*.db
+.DS_Store
+filmina_full_dump.sql

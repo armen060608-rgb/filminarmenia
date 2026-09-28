@@ -1,0 +1,26 @@
+.container__database {
+    margin: 50px 160px 40px 160px
+}
+
+.heading__database {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.database__to-links {
+    color: #006C43;
+    height: 47px !important;
+}
+
+.row__database {
+    width: 100%;
+    border: #000000 1px solid;
+    border-radius: 6px;
+    padding: 20px;
+    font-size: 40px;
+    color: #AEAAAA;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

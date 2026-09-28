@@ -1,0 +1,94 @@
+services:
+  db:
+    image: postgres:16
+    container_name: app-db
+    restart: always
+    env_file: .env
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - film-network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: app-backend
+    restart: always
+    env_file: .env
+    ports:
+      - "5101:8080"
+    depends_on:
+      - db
+    networks:
+      - film-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: app-frontend
+    restart: always
+    environment:
+      - BACKEND_URL=${BACKEND_URL}
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    volumes:
+      - /srv/sandbox/storage:/var/www/media   
+    networks:
+      - film-network
+
+  filebrowser:
+      image: filebrowser/filebrowser:latest
+      container_name: filebrowser
+      restart: always
+      user: "1000:1000"
+      ports:
+        - "8082:80" 
+      volumes:
+        - /srv/sandbox/storage:/srv
+        - /srv/sandbox/app/filebrowser.db:/database.db
+      command: ["-d", "database.db"]
+      networks:
+        - film-network
+
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+    ports:
+      - "9000:9000"
+    networks:
+      - film-network
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin-web
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+    networks:
+      - film-network
+
+networks:
+  film-network:
+    driver: bridge
+
+volumes:
+  db_data:
+  portainer_data:
+  pgadmin_data:

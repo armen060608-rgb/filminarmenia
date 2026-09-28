@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+.sv {
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #1a2e4a;
+    background: #f5f6fa;
+    min-height: 100vh;
+}
+
+/* ══════════════════════════════════════
+   HERO
+══════════════════════════════════════ */
+.sv-hero {
+    position: relative;
+    min-height: 420px;
+    background: linear-gradient(135deg, #eaecf8 0%, #dde2f4 40%, #cdd5ee 100%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 60px 64px 40px;
+}
+
+/* ── Background illustration ── */
+.sv-hero__bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* Main mountain shape */
+.sv-hero__mountain {
+    position: absolute;
+    right: -40px;
+    top: -30px;
+    width: 620px;
+    height: 480px;
+    background: radial-gradient(ellipse at 50% 40%, #b8c4e0 0%, #a8b8d8 30%, #8898c0 60%, transparent 85%);
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    opacity: 0.55;
+}
+
+/* Secondary mountain peak */
+.sv-hero__mountain::after {
+    content: "";
+    position: absolute;
+    right: 80px;
+    top: 60px;
+    width: 300px;
+    height: 280px;
+    background: radial-gradient(ellipse at 50% 30%, #c8d4ec 0%, #9aabcc 50%, transparent 80%);
+    clip-path: polygon(50% 5%, 90% 100%, 10% 100%);
+    opacity: 0.7;
+}
+
+/* Church silhouette */
+.sv-hero__church {
+    position: absolute;
+    right: 220px;
+    bottom: 60px;
+    width: 90px;
+    height: 120px;
+    background: #8494b8;
+    opacity: 0.45;
+    clip-path: polygon(
+            0% 100%, 0% 50%,
+            20% 50%, 20% 30%,
+            35% 5%, 50% 0%,
+            65% 5%, 80% 30%,
+            80% 50%, 100% 50%,
+            100% 100%
+    );
+}
+
+/* Mist layer */
+.sv-hero__mist {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(to top, #eaecf8 0%, transparent 100%);
+}
+
+/* Robot mascot */
+.sv-hero__robot {
+    position: absolute;
+    right: 100px;
+    bottom: 28px;
+    animation: sv-float 3s ease-in-out infinite;
+    filter: drop-shadow(0 8px 16px rgba(26,46,74,0.15));
+}
+
+@keyframes sv-float {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-8px); }
+}
+
+/* ── Hero text ── */
+.sv-hero__content {
+    position: relative;
+    z-index: 2;
+    max-width: 580px;
+}
+
+.sv-hero__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.12;
+    color: #1a2e4a;
+    margin: 0 0 18px;
+    letter-spacing: -0.5px;
+}
+
+.sv-hero__sub {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #3d5070;
+    margin: 0 0 32px;
+    font-weight: 300;
+}
+
+/* Trust badges */
+.sv-hero__trust {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.sv-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    background: rgba(255,255,255,0.72);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 10px;
+    padding: 9px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #1a2e4a;
+    box-shadow: 0 2px 8px rgba(26,46,74,0.06);
+}
+
+.sv-trust-item__icon {
+    display: flex;
+    color: #4a6090;
+    flex-shrink: 0;
+}
+
+/* ══════════════════════════════════════
+   SECTION
+══════════════════════════════════════ */
+.sv-section {
+    padding: 52px 64px 72px;
+}
+
+.sv-section__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.sv-section__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a2e4a;
+    margin: 0;
+    letter-spacing: -0.2px;
+}
+
+.sv-section__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #1a2e4a;
+    text-decoration: none;
+    opacity: 0.65;
+    transition: opacity .15s;
+}
+.sv-section__link:hover { opacity: 1; }
+
+/* ══════════════════════════════════════
+   SERVICES GRID
+══════════════════════════════════════ */
+.sv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+/* ── Card ── */
+.sv-card {
+    background: #fff;
+    border: 1px solid #e4e9f2;
+    border-radius: 16px;
+    padding: 28px 26px 26px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    cursor: pointer;
+    transition: box-shadow .2s, transform .2s, border-color .2s;
+    animation: sv-fadein .5s ease both;
+}
+
+@keyframes sv-fadein {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.sv-card:hover,
+.sv-card--hovered {
+    box-shadow: 0 8px 28px rgba(26,46,74,0.11);
+    transform: translateY(-3px);
+    border-color: #c2cedf;
+}
+
+/* Icon bubble */
+.sv-card__icon-wrap {
+    width: 62px;
+    height: 62px;
+    min-width: 62px;
+    border-radius: 14px;
+    background: #eef1f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3a4c6e;
+    transition: background .2s, color .2s;
+}
+
+.sv-card:hover .sv-card__icon-wrap,
+.sv-card--hovered .sv-card__icon-wrap {
+    background: #dce4f4;
+    color: #1a2e4a;
+}
+
+.sv-card__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.sv-card__title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a2e4a;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.sv-card__desc {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #5a6f88;
+    margin: 0;
+    font-weight: 300;
+}
+
+.sv-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a2e4a;
+    text-decoration: none;
+    margin-top: 6px;
+    transition: gap .15s, opacity .15s;
+}
+.sv-card__link:hover { gap: 9px; opacity: 0.75; }
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media (max-width: 1100px) {
+    .sv-hero { padding: 48px 40px 36px; }
+    .sv-section { padding: 44px 40px 60px; }
+    .sv-hero__title { font-size: 42px; }
+}
+
+@media (max-width: 860px) {
+    .sv-grid { grid-template-columns: repeat(2, 1fr); }
+    .sv-hero__mountain { width: 380px; opacity: 0.35; }
+    .sv-hero__robot { right: 20px; bottom: 20px; }
+}
+
+@media (max-width: 600px) {
+    .sv-hero { padding: 36px 20px 28px; min-height: auto; }
+    .sv-section { padding: 32px 20px 48px; }
+    .sv-hero__title { font-size: 30px; }
+    .sv-grid { grid-template-columns: 1fr; }
+    .sv-hero__trust { gap: 10px; }
+    .sv-trust-item { font-size: 12px; padding: 7px 11px; }
+    .sv-hero__robot { display: none; }
+}
+
+@media (max-width: 480px) {
+    .sv-section__head {
+    display: block !important;
+        gap: 16px;
+    }
+    .sv-section__link {
+        margin-top: 16px;
+    }
+}

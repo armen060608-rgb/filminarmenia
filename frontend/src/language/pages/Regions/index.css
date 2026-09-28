@@ -1,0 +1,28 @@
+.container__regions {
+    margin: 30px 65px;
+}
+
+.heading__regions {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.tabs {
+    margin-top: 10px;
+}
+
+.upper-container__regions {
+    width: 50%;
+}
+
+.table th {
+    width: 10%;
+}
+
+.create-wrapper__regions {
+    display: flex;
+    align-items: center;
+    height: 47px;
+    margin-bottom: 6px;
+    padding: 0;
+}
